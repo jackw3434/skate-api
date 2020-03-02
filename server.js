@@ -26,7 +26,7 @@ require('./routes/identity/index')(router);
 app.use('/api', router);
 
 router.route('/').get(function (req, res) {
-    return res.status(200).send("Hello World, You've hit the Skate API");
+    return res.status(200).send("Hello World, You've hit the Skate API, Heroku says Hi!");
 });
 
 app.listen(serverPort, () => {
