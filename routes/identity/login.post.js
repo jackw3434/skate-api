@@ -3,7 +3,7 @@ let auth = require('../../utils/auth');
 
 module.exports = function (router) {
     router.route('/login').post(function (req, res) {
-   
+        console.log("111")
         let userEmail, userPassword;
    
         if(req.body && req.body.email && req.body.password){
@@ -12,9 +12,9 @@ module.exports = function (router) {
         } else {
             return res.status(400).send("Missing Email or Password");
         }        
-
+      
         User.find({ email: userEmail }, function (err, user) {
-         
+            console.log("hello")
             if (err || !user || user.length == 0) {
                 return res.status(400).send('User Not Found');
             }

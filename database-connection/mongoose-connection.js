@@ -14,9 +14,8 @@ module.exports = {
 
         mongoose.connect(connectionString, option, (err) => {
             if (err) {
-                console.log(err);
-                console.log('Retrying Database Connection');
-                this.connectToMongoose();
+                console.log('mongoose error connecting ',err);
+                //console.log('Retrying Database Connection');               
             }
             console.log("Database Connected", connectionString);
         });

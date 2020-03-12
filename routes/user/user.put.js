@@ -21,8 +21,7 @@ module.exports = function (router) {
                 return res.status(400).send("Cannot Change a User's Role");
             }
 
-            user.first_name = req.body.first_name;
-            user.surname = req.body.surname;
+            user.name = req.body.name;
             user.email = req.body.email;
 
             user.save(function (err, editedUser) {
@@ -31,7 +30,7 @@ module.exports = function (router) {
                     return res.status(400).send(err);
                 }
 
-                return res.status(200).json("User: " + editedUser.first_name + " has been edited.");
+                return res.status(200).json("User: " + editedUser.name + " has been edited.");
             })
         })
     });
