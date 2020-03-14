@@ -21,9 +21,10 @@ let testHelper = {
                 "email": "jack.test@gmail.com",
                 "password": "test123"
             }, {
-                json: true
-            })
+                    json: true
+                })
                 .then(function (res) {
+                    console.log("skfhsfkjhdfkj  ", res)
                     token = res._json.accessToken;
                     frisby.globalSetup({
                         request: {
@@ -49,8 +50,7 @@ let populateUsersCollection = async function () {
 
     let user = new User({
         _id: new mongoose.Types.ObjectId("06a9fab994a0eef9618e9d58"),
-        first_name: "Jack",
-        surname: "Williams",
+        name: "Jack",
         email: "jack.test@gmail.com",
         password: auth.hashPassword("test123"),
         role: "superAdmin"
@@ -60,8 +60,7 @@ let populateUsersCollection = async function () {
 
     let user2 = new User({
         _id: new mongoose.Types.ObjectId("8c835ce289db541d3cdc4183"),
-        first_name: "John",
-        surname: "Test",
+        name: "John",
         email: "john.test@gmail.com",
         password: auth.hashPassword("test123"),
         role: "superAdmin"
@@ -71,8 +70,7 @@ let populateUsersCollection = async function () {
 
     let user3 = new User({
         _id: new mongoose.Types.ObjectId("64706e408463696b3232a513"),
-        first_name: "James",
-        surname: "Test",
+        name: "James",
         email: "james.test@gmail.com",
         password: auth.hashPassword("test123"),
         role: "superAdmin"

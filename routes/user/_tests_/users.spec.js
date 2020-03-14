@@ -28,8 +28,7 @@ describe('users test', function () {
                 .get(baseURL + 'user/06a9fab994a0eef9618e9d58')
                 .then(function (res) {
                     expect(res.status).toBe(200);
-                    expect(res._json.user.first_name).toBe("Jack");
-                    expect(res._json.user.surname).toBe("Williams");
+                    expect(res._json.user.name).toBe("Jack");
                     expect(res._json.user.email).toBe("jack.test@gmail.com");
                 })
         });
@@ -48,8 +47,7 @@ describe('users test', function () {
         it('should POST a new user and return a status of 200 OK', function () {
             return frisby
                 .post(baseURL + 'users', {
-                    first_name: "Dave",
-                    surname: "Test",
+                    name: "Dave",
                     email: "dave.test@gmail.com",
                     password: "test123",
                     role: "superAdmin"
@@ -63,7 +61,7 @@ describe('users test', function () {
         // it('should not POST a new user with missing credentials and should return a status of 400 BAD REQUEST', function () {
         //     return frisby
         //         .post(baseURL + 'users', {
-        //             first_name: "Dave",
+        //             name: "Dave",
         //             email: "dave.test@gmail.com",
         //             password: "test123",
         //             role: "superAdmin"
@@ -79,8 +77,7 @@ describe('users test', function () {
         it('should PUT a user and return a status of 200 OK', function () {
             return frisby
                 .put(baseURL + 'users/8c835ce289db541d3cdc4183', {
-                    first_name: "JohnEdit",
-                    surname: "TestEdit",
+                    name: "JohnEdit",
                     email: "johnEdit.test@gmail.com",
                 })
                 .then(function (res) {
