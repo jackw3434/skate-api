@@ -6,8 +6,8 @@ let SkatePinSchema = new Schema({
   title: { type: String, required: true, },
   createdBy: { type: String, required: true },
   coordinate: {
-    latitude: { type: String, required: true },
-    longitude: { type: String, required: true }
+    latitude: { type: Number, required: true },
+    longitude: { type: Number, required: true }
   },
   description: { type: String, required: true },
   photo: { type: String },
@@ -18,7 +18,7 @@ let SkatePinSchema = new Schema({
       reviewMessage: { type: String, required: true },
     }
   ],
-  skateDate: { type: Date },
+  skateDate: { type: String },
   startTime: { type: String },
   endTime: { type: String },
   pinColor: { type: String, required: true }

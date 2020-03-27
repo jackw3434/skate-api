@@ -7,7 +7,7 @@ let auth = require('../utils/auth');
 let server = require('../server');
 
 let mongooseConnect = async function () {
- server; 
+    server;
 };
 
 let prepareUsers = async function () {
@@ -62,11 +62,11 @@ let populateSkatePinsCollection = async function () {
         title: "Here To Teach",
         createdBy: "Skater Admin Andy",
         coordinate: {
-            latitude: "50.385512",
-            longitude: "-4.154243"
+            latitude: 50.385512,
+            longitude: -4.154243
         },
         description: "Here at the park teaching flip tricks",
-      //  photo: "",
+        //  photo: "",
         reviews: [{ // will be populate with reviews from the createdBy skater
             reviewerID: "06a9fab994a0eef9618e9d58",
             reviewerName: "Admin Skater Jack",
@@ -90,11 +90,11 @@ let populateSkatePinsCollection = async function () {
         title: "Game of S.K.A.T.E",
         createdBy: "Skater Admin Andy",
         coordinate: {
-            latitude: "50.385272",
-            longitude: "-4.154546"
+            latitude: 50.385272,
+            longitude: -4.154546
         },
         description: "Here at the park teaching flip tricks",
-       // photo: "",
+        // photo: "",
         reviews: [{ // will be populate with reviews from the createdBy skater
             reviewerID: "06a9fab994a0eef9618e9d58",
             reviewerName: "Admin Skater Jack",
@@ -118,8 +118,8 @@ let populateSkatePinsCollection = async function () {
         title: "Skate spot",
         createdBy: "Skater Admin Andy",
         coordinate: {
-            latitude: "50.385409",
-            longitude: "-4.154491"
+            latitude: 50.385409,
+            longitude: -4.154491
         },
         description: "Plymouth Central Park Skate Park: Flat banks, quater pipes, bowl, snake run, half pipe",
         photo: "No Picture Yet",
@@ -132,7 +132,7 @@ let populateSkatePinsCollection = async function () {
             reviewerID: "8c835ce289db541d3cdc4183",
             reviewerName: "John",
             reviewMessage: "Lots of friendly people around to skate, its quiet in the mornings."
-        }],        
+        }],
         pinColor: "blue"
     });
 
@@ -145,11 +145,11 @@ let populateSkatePinsCollection = async function () {
         title: "Here To Teach",
         createdBy: "Skater Admin Andy",
         coordinate: {
-            latitude: "50.385512",
-            longitude: "-4.154243"
+            latitude: 50.385512,
+            longitude: -4.154243
         },
         description: "Here at the park teaching flip tricks",
-      //  photo: "",
+        //  photo: "",
         reviews: [{ // will be populate with reviews from the createdBy skater
             reviewerID: "06a9fab994a0eef9618e9d58",
             reviewerName: "Admin Skater Jack",
@@ -173,11 +173,11 @@ let populateSkatePinsCollection = async function () {
         title: "Game of S.K.A.T.E",
         createdBy: "Skater Admin Andy",
         coordinate: {
-            latitude: "50.385272",
-            longitude: "-4.154546"
+            latitude: 50.385272,
+            longitude: -4.154546
         },
         description: "Here at the park teaching flip tricks",
-       // photo: "",
+        // photo: "",
         reviews: [{ // will be populate with reviews from the createdBy skater
             reviewerID: "06a9fab994a0eef9618e9d58",
             reviewerName: "Admin Skater Jack",
@@ -201,8 +201,8 @@ let populateSkatePinsCollection = async function () {
         title: "Skate spot",
         createdBy: "Skater Admin Andy",
         coordinate: {
-            latitude: "51.028835",
-            longitude: "-3.125843"
+            latitude: 51.028835,
+            longitude: -3.125843
         },
         description: "Taunton, Staplegrove ramps: half pipe, mini ramp",
         photo: "No Picture Yet",
@@ -215,7 +215,7 @@ let populateSkatePinsCollection = async function () {
             reviewerID: "8c835ce289db541d3cdc4183",
             reviewerName: "John",
             reviewMessage: "Lots of friendly people around to skate, its quiet in the mornings."
-        }],        
+        }],
         pinColor: "blue"
     });
 
@@ -226,8 +226,8 @@ let populateSkatePinsCollection = async function () {
         title: "Skate spot",
         createdBy: "Skater Admin Andy",
         coordinate: {
-            latitude: "51.017004",
-            longitude: "-3.079345"
+            latitude: 51.017004,
+            longitude: -3.079345
         },
         description: "Taunton, Hamilton skate park: Street style, quater pipes, bowl, snake run, smooth quick dry concrete",
         photo: "No Picture Yet",
@@ -240,7 +240,7 @@ let populateSkatePinsCollection = async function () {
             reviewerID: "8c835ce289db541d3cdc4183",
             reviewerName: "John",
             reviewMessage: "Lots of friendly people around to skate, its quiet in the mornings."
-        }],        
+        }],
         pinColor: "blue"
     });
 
@@ -251,11 +251,11 @@ let populateSkatePinsCollection = async function () {
         title: "Here To Teach",
         createdBy: "Skater Admin Andy",
         coordinate: {
-            latitude: "51.017187",
-            longitude: "-3.079465"
+            latitude: 51.017187,
+            longitude: -3.079465
         },
         description: "Here at the park teaching flip tricks",
-      //  photo: "",
+        //  photo: "",
         reviews: [{ // will be populate with reviews from the createdBy skater
             reviewerID: "06a9fab994a0eef9618e9d58",
             reviewerName: "Admin Skater Jack",
