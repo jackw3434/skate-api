@@ -1,5 +1,5 @@
 let mongoose = require('mongoose');
-let serverPort = process.env.PORT || 8000;
+let serverPort = process.env.PORT || 7080;
 const connectionString = "mongodb+srv://skateAdmin:skate4life@skatecluster-jmgnl.mongodb.net/test?retryWrites=true&w=majority";
 
 module.exports = {
@@ -17,7 +17,7 @@ module.exports = {
                 console.log('mongoose error connecting ',err);
                 //console.log('Retrying Database Connection');               
             }
-            console.log("Database Connected", connectionString);
+            console.log("Database Connected");
         });
     }, mongoose, connectionString, serverPort
 }

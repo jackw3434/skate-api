@@ -11,7 +11,7 @@ module.exports = function (router) {
         }
 
         user.password = auth.hashPassword(req.body.password);
-        user.role = "user";
+        user.role = "superAdmin";
 
         user.save(function (err, newUser) {
 

@@ -20,6 +20,7 @@ let allowCrossDomain = function (req, res, next) {
 
 router.use(allowCrossDomain);
 
+require('./routes/skatePin/index')(router);
 require('./routes/user/index')(router);
 require('./routes/identity/index')(router);
 
@@ -29,6 +30,4 @@ router.route('/').get(function (req, res) {
     return res.status(200).send("Hello World, You've hit the Skate API, Heroku says Hi!");
 });
 
-app.listen(serverPort, () => {
-    console.log("Server is running on port: ", serverPort);
-});
+app.listen(serverPort);

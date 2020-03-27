@@ -5,21 +5,28 @@
             "user.get": true,
             "user.put": true,
             "users.get": true,
-            "user.post": true
+            "user.post": true,
+            "skatePins.get": true,
+            "skatePin.post": true,
+            "skatePin.delete": true
         },
         "admin": {
             "user.delete": true,
             "user.get": true,
             "user.put": true,
             "users.get": true,
-            "user.post": true
+            "user.post": true,
+            "skatePins.get": true,
+            "skatePin.post": true,
+            "skatePin.delete": true
         },
         "user": {
             "user.delete": true,
             "user.get": true,
-            "user.put": true,
-            "users.get": true,
-            "user.post": true
+            "user.put": true,            
+            "skatePins.get": true,
+            "skatePin.post": true,
+            "skatePin.delete": true
         }
     }
 }
