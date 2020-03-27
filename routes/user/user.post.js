@@ -3,9 +3,9 @@ let auth = require('../../utils/auth');
 let hasPermission = require('../../utils/hasPermission');
 
 module.exports = function (router) {
-    router.route('/users').post(auth.required, function (req, res) {
+    router.route('/users').post(auth.optional, function (req, res) {
 
-        if (!hasPermission(req.tokenData, "user.post", req, res)) return;
+       // if (!hasPermission(req.tokenData, "user.post", req, res)) return;
 
         var user = new User(req.body);
 
