@@ -4,7 +4,7 @@ let auth = require('../../utils/auth');
 module.exports = function (router) {
     router.route('/register').post(function (req, res) {
 
-        var user = new User(req.body);
+        let user = new User(req.body);
 
         if (!user.email || !user.name || !user.password) {
             return res.status(400).send('validation_error, credentials are required.');
