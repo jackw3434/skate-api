@@ -123,6 +123,7 @@ let populateSkatePinsCollection = async function () {
         },
         description: "Plymouth Central Park Skate Park: Flat banks, quater pipes, bowl, snake run, half pipe",
         photo: "No Picture Yet",
+       
         reviews: [{ // will be populate with reviews for this spot
             reviewerID: "06a9fab994a0eef9618e9d58",
             reviewerName: "Admin Skater Jack",
