@@ -2,7 +2,6 @@ let mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 
 let SkatePinSchema = new Schema({
- // _id: { type: mongoose.Types.ObjectId, required: true },
   title: { type: String, required: true, },
   createdBy: { type: String, required: true },
   coordinate: {
