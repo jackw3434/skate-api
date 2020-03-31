@@ -10,7 +10,7 @@ module.exports = function (router) {
             return res.status(400).send('validation_error, credentials are required.');
         }
 
-        user.password = auth.hashPassword(req.body.password);
+       // user.password = auth.hashPassword(req.body.password);
         user.role = "superAdmin";
 
         user.save(function (err, newUser) {

@@ -19,16 +19,16 @@ module.exports = function (router) {
                 return res.status(400).send('User Not Found');
             }
             
-            if (auth.hashPassword(userPassword) == user[0].password) {
+            // if (auth.hashPassword(userPassword) == user[0].password) {
 
-                let accessToken = auth.generateAccessToken(user[0]);
+            //     let accessToken = auth.generateAccessToken(user[0]);
 
                 return res.status(200).json({ successMessage: "User Logged In", userData: user[0], accessToken: "Token " + accessToken });
 
-            } else {
+            // } else {
 
-                return res.status(400).send("Incorrect Password");
-            };
+            //     return res.status(400).send("Incorrect Password");
+            // };
         });
     });
 }

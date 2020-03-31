@@ -287,7 +287,17 @@ let populateUsersCollection = async function () {
         name: "Admin Skater Jack",
         email: "jack.test@gmail.com",
         password: auth.hashPassword("test123"),
-        role: "superAdmin"
+        role: "superAdmin",
+        reviews: [{ // will be populate with reviews from the createdBy skater
+            reviewerID: "06a9fab994a0eef9618e9d58",
+            reviewerName: "Admin Skater Jack",
+            reviewMessage: "Really helped me learn and explained things well."
+        },
+        {
+            reviewerID: "8c835ce289db541d3cdc4183",
+            reviewerName: "John",
+            reviewMessage: "Cool guy to skate with, really friendly."
+        }]
     });
 
     await user.save();
