@@ -3,6 +3,7 @@ let Schema = mongoose.Schema;
 
 let SkatePinSchema = new Schema({
   title: { type: String, required: true, },
+  userID: { type: String },
   createdBy: { type: String, required: true },
   coordinate: {
     latitude: { type: Number, required: true },
