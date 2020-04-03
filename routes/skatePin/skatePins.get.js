@@ -3,9 +3,9 @@ let auth = require('../../utils/auth');
 let hasPermission = require('../../utils/hasPermission');
 
 module.exports = function (router) {
-    router.route('/skatePins').get(auth.optional, function (req, res) {
+    router.route('/skatePins').get(auth.required, function (req, res) {
 
-      //  if (!hasPermission(req.tokenData, "skatePins.get", req, res)) return;
+        if (!hasPermission(req.tokenData, "skatePins.get", req, res)) return;
   
         SkatePins.find({}, function (err, skatePins) {
 

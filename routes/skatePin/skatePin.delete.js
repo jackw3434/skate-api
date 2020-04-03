@@ -3,9 +3,9 @@ let auth = require('../../utils/auth');
 let hasPermission = require('../../utils/hasPermission');
 
 module.exports = function (router) {
-    router.route('/skatePin/:id').delete(auth.optional, function (req, res) {
+    router.route('/skatePin/:id').delete(auth.required, function (req, res) {
 
-     //  if (!hasPermission(req.tokenData, "skatePin.delete", req, res)) return;
+       if (!hasPermission(req.tokenData, "skatePin.delete", req, res)) return;
 
         SkatePin.deleteOne({ _id: req.params.id }, function (err, result) {
 

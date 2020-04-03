@@ -23,6 +23,7 @@ router.use(allowCrossDomain);
 require('./routes/skatePin/index')(router);
 require('./routes/user/index')(router);
 require('./routes/identity/index')(router);
+require('./routes/me/index')(router);
 
 app.use('/api', router);
 
