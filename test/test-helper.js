@@ -69,7 +69,7 @@ let populateSkatePinsCollection = async function () {
             longitude: -4.154243
         },
         description: "Here at the park teaching flip tricks",
-        //  photo: "",
+        photo: "",
         reviews: [{ // will be populate with reviews from the createdBy skater
             reviewerID: "06a9fab994a0eef9618e9d58",
             reviewerName: "Admin Skater Jack",
@@ -99,8 +99,8 @@ let populateSkatePinsCollection = async function () {
             latitude: 50.385272,
             longitude: -4.154546
         },
-        description: "Here at the park teaching flip tricks",
-        // photo: "",
+        description: "Game of skate anyone?",
+        photo: "",
         reviews: [{ // will be populate with reviews from the createdBy skater
             reviewerID: "06a9fab994a0eef9618e9d58",
             reviewerName: "Admin Skater Jack",
@@ -192,7 +192,7 @@ let populateSkatePinsCollection = async function () {
             latitude: 50.385272,
             longitude: -4.154546
         },
-        description: "Here at the park teaching flip tricks",
+        description: "game of skate",
         photo: "",
         reviews: [{ // will be populate with reviews from the createdBy skater
             reviewerID: "06a9fab994a0eef9618e9d58",
@@ -308,13 +308,15 @@ let populateUsersCollection = async function () {
 
     let user = new User({
         _id: new mongoose.Types.ObjectId("06a9fab994a0eef9618e9d58"),
+        profilePicture:"",
         name: "Admin Skater Jack",
         email: "jack.test@gmail.com",
         age:25,
         region:"England",
         skateStance:"regular",
+        styleOfSkating:["street","ramps","old school"],
         reasonsForUsingTheApp:["meet others who skate","teach others to skate"],
-        achievedTricks:["ollie","kick flip", "heelflip"],
+        achievedTricks:["Ollie","Kick Flip", "Heel Flip"],
         usersCreatedPins:[],
         password: auth.hashPassword("test123"),
         role: "superAdmin",
