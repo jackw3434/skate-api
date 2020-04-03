@@ -8,11 +8,12 @@ module.exports = function (router) {
 
             if (err) {
                 return res.status(400).send(err);
-            }           
+            } 
+            
+            if(req.body.profilePicture){
+                user.profilePicture = req.body.profilePicture
+            }
 
-            let {} = req.body;
-
-            user = req.body;
             // user.profilePicture = req.body.profilePicture;
             // user._name = req.body.name;
             // user.age = req.body.age;
