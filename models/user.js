@@ -6,7 +6,7 @@ let UserSchema = new Schema({
   profilePicture: { type: String },
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
-  age: { type: String },
+  age: { type: Number },
   region: { type: String },
   skateStance: { type: String },
   styleOfSkating: [{ type: String }],

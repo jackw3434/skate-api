@@ -30,7 +30,7 @@ module.exports = function (router) {
                 return res.status(400).send(err);
             }
 
-            return res.status(200).json("Skate Pin: " + newSkatePin.title + " has been created by " + newSkatePin.createdBy);
+            return res.status(200).json("Skate Pin: " + newSkatePin.title + " has been created by " + newSkatePin.createdBy.userName);
         })
     });
 }
