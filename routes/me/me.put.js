@@ -10,18 +10,34 @@ module.exports = function (router) {
                 return res.status(400).send(err);
             } 
             
-            if(req.body.profilePicture){
-                user.profilePicture = req.body.profilePicture
+            // if(req.body.profilePicture){
+            //     user.profilePicture = req.body.profilePicture
+            // }
+
+            if(req.body.name){
+                user.name = req.body.name
             }
 
-            // user.profilePicture = req.body.profilePicture;
-            // user._name = req.body.name;
-            // user.age = req.body.age;
-            // user.region = req.body.region
-            // user.skateStance = req.body.skateStance;
-            // user.styleOfSkating = req.body.styleOfSkating;
-            // user.reasonsForUsingTheApp = req.body.reasonsForUsingTheApp;
-            // user.achievedTricks = req.body.achievedTricks;
+            if(req.body.age){
+                user.age = req.body.age
+            }
+
+            if(req.body.skateStance){
+                user.skateStance = req.body.skateStance
+            }
+
+            if(req.body.styleOfSkating){
+                user.styleOfSkating = req.body.styleOfSkating
+            }
+            if(req.body.reasonsForUsingTheApp){
+                user.reasonsForUsingTheApp = req.body.reasonsForUsingTheApp
+            }
+
+            if(req.body.achievedTricks){
+                user.achievedTricks = req.body.achievedTricks
+            }
+         
+            // user.region = req.body.region   
 
             user.save(function (err, editedUser) {
 
