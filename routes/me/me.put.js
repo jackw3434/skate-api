@@ -38,8 +38,8 @@ module.exports = function (router) {
                     user.achievedTricks.push(req.body.achievedTricks);
                 }
                 if (req.body.learned == false) {
-                    const newArr = user.achievedTricks.filter(e => e !== req.body.achievedTricks)
-                    user.achievedTricks = newArr;
+                   // const newArr = user.achievedTricks.filter(e => e !== req.body.achievedTricks)
+                    user.achievedTricks = req.body.achievedTricks;
                 }
             }
 
