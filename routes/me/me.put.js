@@ -51,7 +51,7 @@ module.exports = function (router) {
                     return res.status(400).send(err);
                 }
 
-                return res.status(200).json("User: " + editedUser.name + " has been edited.");
+                return res.status(200).json("User: " + editedUser.name + " has been edited." + editedUser);
             })
         })
     });
