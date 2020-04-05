@@ -34,13 +34,7 @@ module.exports = function (router) {
             }
 
             if (req.body.achievedTricks) {
-                if (req.body.learned == true) {
-                    user.achievedTricks.push(req.body.achievedTricks);
-                }
-                if (req.body.learned == false) {
-                   // const newArr = user.achievedTricks.filter(e => e !== req.body.achievedTricks)
-                    user.achievedTricks = req.body.achievedTricks;
-                }
+                user.achievedTricks = req.body.achievedTricks;
             }
 
             // user.region = req.body.region   
