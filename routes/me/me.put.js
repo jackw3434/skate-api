@@ -8,35 +8,41 @@ module.exports = function (router) {
 
             if (err) {
                 return res.status(400).send(err);
-            } 
-            
+            }
+
             // if(req.body.profilePicture){
             //     user.profilePicture = req.body.profilePicture
             // }
 
-            if(req.body.name){
+            if (req.body.name) {
                 user.name = req.body.name
             }
 
-            if(req.body.age){
+            if (req.body.age) {
                 user.age = req.body.age
             }
 
-            if(req.body.skateStance){
+            if (req.body.skateStance) {
                 user.skateStance = req.body.skateStance
             }
 
-            if(req.body.styleOfSkating){
+            if (req.body.styleOfSkating) {
                 user.styleOfSkating = req.body.styleOfSkating
             }
-            if(req.body.reasonsForUsingTheApp){
+            if (req.body.reasonsForUsingTheApp) {
                 user.reasonsForUsingTheApp = req.body.reasonsForUsingTheApp
             }
 
-            if(req.body.achievedTricks){
-                user.achievedTricks = req.body.achievedTricks
+            if (req.body.achievedTricks) {
+                if (req.body.learned == true) {
+                    user.achievedTricks.push(req.body.achievedTricks);
+                }
+                if (req.body.learned == false) {
+                    const newArr = user.achievedTricks.filter(e => e !== req.body.achievedTricks)
+                    user.achievedTricks = newArr;
+                }
             }
-         
+
             // user.region = req.body.region   
 
             user.save(function (err, editedUser) {
