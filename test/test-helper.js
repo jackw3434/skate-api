@@ -350,8 +350,8 @@ let populateUsersCollection = async function () {
 
     let user2 = new User({
         _id: new mongoose.Types.ObjectId("8c835ce289db541d3cdc4183"),
-        name: "Jack",
-        email: "jack.test@gmail.com",
+        name: "John",
+        email: "john.test@gmail.com",
         password: auth.hashPassword("test123"),
         role: "superAdmin"
     });
@@ -367,6 +367,36 @@ let populateUsersCollection = async function () {
     });
 
     await user3.save();
+
+    let user4 = new User({
+        _id: new mongoose.Types.ObjectId("5b2dbfee39ea482350b7172b"),
+        profilePicture: "",
+        name: "Admin Skater Jack",
+        email: "jack.test@gmail.com",
+        age: "25-30",
+        //   region:"England",
+        skateStance: "Regular",
+        // styleOfSkating:["Street","Ramps","Old school"],
+        // reasonsForUsingTheApp:["Meet others who skate","Teach others to skate"],
+        achievedTricks: ["Ollie", "Kickflip", "Heelflip"],
+        usersCreatedPins: [],
+        password: auth.hashPassword("test123"),
+        role: "superAdmin",
+        reviews: [
+            // { // will be populate with reviews from the createdBy skater
+            //     reviewerID: "06a9fab994a0eef9618e9d58",
+            //     reviewerName: "Admin Skater Jack",
+            //     reviewMessage: "Really helped me learn and explained things well."
+            // },
+            // {
+            //     reviewerID: "8c835ce289db541d3cdc4183",
+            //     reviewerName: "John",
+            //     reviewMessage: "Cool guy to skate with, really friendly."
+            // }
+        ]
+    });
+
+    await user4.save();
 
     console.log("Populated");
 };

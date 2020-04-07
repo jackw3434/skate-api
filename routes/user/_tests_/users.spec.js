@@ -28,8 +28,8 @@ describe('users test', function () {
                 .get(baseURL + 'user/06a9fab994a0eef9618e9d58')
                 .then(function (res) {
                     expect(res.status).toBe(200);
-                    expect(res._json.user.name).toBe("Admin Skater Jack");
-                    expect(res._json.user.email).toBe("jack.test@gmail.com");
+                    expect(res._json.user.name).toBe("Admin Skater Andy");
+                    expect(res._json.user.email).toBe("andy.test@gmail.com");
                 })
         });
 
