@@ -316,7 +316,7 @@ let populateUsersCollection = async function () {
         skateStance:"Regular",
        // styleOfSkating:["Street","Ramps","Old school"],
        // reasonsForUsingTheApp:["Meet others who skate","Teach others to skate"],
-        achievedTricks:["Ollie","Kick Flip", "Heel Flip"],
+        achievedTricks:["Ollie","Kickflip", "Heelflip"],
         usersCreatedPins:[],
         password: auth.hashPassword("test123"),
         role: "superAdmin",

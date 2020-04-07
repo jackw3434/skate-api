@@ -8,7 +8,9 @@
             "user.post": true,
             "skatePins.get": true,
             "skatePin.post": true,
-            "skatePin.delete": true
+            "skatePin.delete": true,
+            "skateSpotReview.post":true,
+            "reviewSkater.post": true
         },
         "admin": {
             "user.delete": true,
@@ -18,7 +20,9 @@
             "user.post": true,
             "skatePins.get": true,
             "skatePin.post": true,
-            "skatePin.delete": true
+            "skatePin.delete": true,
+            "skateSpotReview.post":true,
+            "reviewSkater.post": true
         },
         "user": {
             "user.delete": true,
@@ -26,7 +30,9 @@
             "user.put": true,            
             "skatePins.get": true,
             "skatePin.post": true,
-            "skatePin.delete": true
+            "skatePin.delete": true,
+            "skateSpotReview.post":true,
+            "reviewSkater.post": true
         }
     }
 }
