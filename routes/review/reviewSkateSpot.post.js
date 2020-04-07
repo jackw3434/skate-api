@@ -3,7 +3,7 @@ let auth = require('../../utils/auth');
 let hasPermission = require('../../utils/hasPermission');
 
 module.exports = function (router) {
-    router.route('/reviewSkatSpot/:id').post(auth.required, function (req, res) {
+    router.route('/reviewSkateSpot/:id').post(auth.required, function (req, res) {
 
         if (!hasPermission(req.tokenData, "skateSpotReview.post", req, res)) return;
 
