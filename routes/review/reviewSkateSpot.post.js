@@ -3,7 +3,7 @@ let SkatePin = require('../../models/skatePin');
 let auth = require('../../utils/auth');
 
 module.exports = function (router) {
-    router.route('/skatePin/:id').post(function (req, res) {
+    router.route('/skatePin/:id').post(auth.required, function (req, res) {
 
         if (!hasPermission(req.tokenData, "skateSpotReview.post", req, res)) return;
 
