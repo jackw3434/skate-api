@@ -1,5 +1,6 @@
 let mongoose = require("mongoose");
 let Schema = mongoose.Schema;
+let UserReviewSchema = require('./userReview')
 
 let SkatePinSchema = new Schema({
   title: { type: String, required: true }, 
