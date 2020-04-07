@@ -321,8 +321,8 @@ let populateUsersCollection = async function () {
     let user = new User({
         _id: new mongoose.Types.ObjectId("06a9fab994a0eef9618e9d58"),
         profilePicture: "",
-        name: "Admin Skater Jack",
-        email: "jack.test@gmail.com",
+        name: "Admin Skater Andy",
+        email: "andy.test@gmail.com",
         age: "25-30",
         //   region:"England",
         skateStance: "Regular",
@@ -332,24 +332,26 @@ let populateUsersCollection = async function () {
         usersCreatedPins: [],
         password: auth.hashPassword("test123"),
         role: "superAdmin",
-        reviews: [{ // will be populate with reviews from the createdBy skater
-            reviewerID: "06a9fab994a0eef9618e9d58",
-            reviewerName: "Admin Skater Jack",
-            reviewMessage: "Really helped me learn and explained things well."
-        },
-        {
-            reviewerID: "8c835ce289db541d3cdc4183",
-            reviewerName: "John",
-            reviewMessage: "Cool guy to skate with, really friendly."
-        }]
+        reviews: [
+            // { // will be populate with reviews from the createdBy skater
+            //     reviewerID: "06a9fab994a0eef9618e9d58",
+            //     reviewerName: "Admin Skater Jack",
+            //     reviewMessage: "Really helped me learn and explained things well."
+            // },
+            // {
+            //     reviewerID: "8c835ce289db541d3cdc4183",
+            //     reviewerName: "John",
+            //     reviewMessage: "Cool guy to skate with, really friendly."
+            // }
+        ]
     });
 
     await user.save();
 
     let user2 = new User({
         _id: new mongoose.Types.ObjectId("8c835ce289db541d3cdc4183"),
-        name: "John",
-        email: "john.test@gmail.com",
+        name: "Jack",
+        email: "jack.test@gmail.com",
         password: auth.hashPassword("test123"),
         role: "superAdmin"
     });
