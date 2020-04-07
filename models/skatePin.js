@@ -13,13 +13,7 @@ let SkatePinSchema = new Schema({
   },
   description: { type: String },
   photo: { type: String },
-  reviews: [
-    {
-      reviewerID: { type: mongoose.Types.ObjectId, required: true },
-      reviewerName: { type: String, required: true },
-      reviewMessage: { type: String, required: true },
-    }
-  ],
+  reviews: [UserReviewSchema],  
   skateDate: { type: String },
   startTime: { type: String },
   endTime: { type: String },

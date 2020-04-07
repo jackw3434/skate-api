@@ -13,8 +13,12 @@ module.exports = function (router) {
                 return res.status(400).send('Validation_error, No matching User for id ' + req.params.id);
             }
 
-            let review = new UserReview(req.body.review)
+            let review = new UserReview()
 
+            review.reviewerID = req.tokenData._id;
+            review.reviewerName = req.tokenData.name;
+            review.reviewMessage = req.params.review;
+            
             user.reviews.push(review);
 
             user.save(function (err, reviewedUser) {

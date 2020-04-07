@@ -13,7 +13,11 @@ module.exports = function (router) {
                 return res.status(400).send('Validation_error, No matching User for id ' + req.params.id);
             }
 
-            let review = new SkateSpotReview(req.body.review)
+            let review = new SkateSpotReview()
+
+            review.reviewerID = req.tokenData._id;
+            review.reviewerName = req.tokenData.name;
+            review.reviewMessage = req.params.review;
 
             pin.reviews.push(review);
 
