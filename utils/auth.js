@@ -32,6 +32,7 @@ let auth = {
         let expirationDate = new Date();
         return jwt.sign({
             user_email: user.email,
+            user_name: user.name,
             user_id: user._id,
             user_role: user.role,
             exp: parseInt((expirationDate.getTime() / 1000) + accessTokenTime, 10)

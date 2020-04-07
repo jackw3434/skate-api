@@ -73,12 +73,12 @@ let populateSkatePinsCollection = async function () {
         reviews: [{ // will be populate with reviews from the createdBy skater
             reviewerID: "06a9fab994a0eef9618e9d58",
             reviewerName: "Admin Skater Jack",
-            reviewMessage: "Really helped me learn and explained things well."
+            reviewMessage: "Here To Teach Really helped me learn and explained things well."
         },
         {
             reviewerID: "8c835ce289db541d3cdc4183",
             reviewerName: "John",
-            reviewMessage: "Cool guy to skate with, really friendly."
+            reviewMessage: "Here To Teach Cool guy to skate with, really friendly."
         }],
         skateDate: "4/27/2020",
         startTime: "11:00:00 AM",
@@ -104,12 +104,12 @@ let populateSkatePinsCollection = async function () {
         reviews: [{ // will be populate with reviews from the createdBy skater
             reviewerID: "06a9fab994a0eef9618e9d58",
             reviewerName: "Admin Skater Jack",
-            reviewMessage: "Really helped me learn and explained things well."
+            reviewMessage: "Game of S.K.A.T.E Really helped me learn and explained things well."
         },
         {
             reviewerID: "8c835ce289db541d3cdc4183",
             reviewerName: "John",
-            reviewMessage: "Cool guy to skate with, really friendly."
+            reviewMessage: "Game of S.K.A.T.E Cool guy to skate with, really friendly."
         }],
         skateDate: "4/27/2020",
         startTime: "13:00:00 AM",
@@ -136,12 +136,12 @@ let populateSkatePinsCollection = async function () {
         reviews: [{ // will be populate with reviews for this spot
             reviewerID: "06a9fab994a0eef9618e9d58",
             reviewerName: "Admin Skater Jack",
-            reviewMessage: "This is a cool place to skate"
+            reviewMessage: "Skate spot This is a cool place to skate"
         },
         {
             reviewerID: "8c835ce289db541d3cdc4183",
             reviewerName: "John",
-            reviewMessage: "Lots of friendly people around to skate, its quiet in the mornings."
+            reviewMessage: "Skate spot Lots of friendly people around to skate, its quiet in the mornings."
         }],
         pinColor: "blue"
     });
@@ -166,12 +166,12 @@ let populateSkatePinsCollection = async function () {
         reviews: [{ // will be populate with reviews from the createdBy skater
             reviewerID: "06a9fab994a0eef9618e9d58",
             reviewerName: "Admin Skater Jack",
-            reviewMessage: "Really helped me learn and explained things well."
+            reviewMessage: "Here To Teach Really helped me learn and explained things well."
         },
         {
             reviewerID: "8c835ce289db541d3cdc4183",
             reviewerName: "John",
-            reviewMessage: "Cool guy to skate with, really friendly."
+            reviewMessage: "Here To Teach Cool guy to skate with, really friendly."
         }],
         skateDate: "4/27/2020",
         startTime: "11:00:00 AM",
@@ -197,12 +197,12 @@ let populateSkatePinsCollection = async function () {
         reviews: [{ // will be populate with reviews from the createdBy skater
             reviewerID: "06a9fab994a0eef9618e9d58",
             reviewerName: "Admin Skater Jack",
-            reviewMessage: "Really helped me learn and explained things well."
+            reviewMessage: "Game of S.K.A.T.E Really helped me learn and explained things well."
         },
         {
             reviewerID: "8c835ce289db541d3cdc4183",
             reviewerName: "John",
-            reviewMessage: "Cool guy to skate with, really friendly."
+            reviewMessage: "Game of S.K.A.T.E Cool guy to skate with, really friendly."
         }],
         skateDate: "4/27/2020",
         startTime: "13:00:00 AM",
@@ -228,12 +228,12 @@ let populateSkatePinsCollection = async function () {
         reviews: [{ // will be populate with reviews for this spot
             reviewerID: "06a9fab994a0eef9618e9d58",
             reviewerName: "Admin Skater Jack",
-            reviewMessage: "This is a cool place to skate"
+            reviewMessage: "Skate spot This is a cool place to skate"
         },
         {
             reviewerID: "8c835ce289db541d3cdc4183",
             reviewerName: "John",
-            reviewMessage: "Lots of friendly people around to skate, its quiet in the mornings."
+            reviewMessage: "Skate spot Lots of friendly people around to skate, its quiet in the mornings."
         }],
         pinColor: "blue"
     });
@@ -256,12 +256,12 @@ let populateSkatePinsCollection = async function () {
         reviews: [{ // will be populate with reviews for this spot
             reviewerID: "06a9fab994a0eef9618e9d58",
             reviewerName: "Admin Skater Jack",
-            reviewMessage: "This is a cool place to skate"
+            reviewMessage: "Skate spot This is a cool place to skate"
         },
         {
             reviewerID: "8c835ce289db541d3cdc4183",
             reviewerName: "John",
-            reviewMessage: "Lots of friendly people around to skate, its quiet in the mornings."
+            reviewMessage: "Skate spot Lots of friendly people around to skate, its quiet in the mornings."
         }],
         pinColor: "blue"
     });
@@ -284,12 +284,12 @@ let populateSkatePinsCollection = async function () {
         reviews: [{ // will be populate with reviews from the createdBy skater
             reviewerID: "06a9fab994a0eef9618e9d58",
             reviewerName: "Admin Skater Jack",
-            reviewMessage: "Really helped me learn and explained things well."
+            reviewMessage: "Here To Teach Really helped me learn and explained things well."
         },
         {
             reviewerID: "8c835ce289db541d3cdc4183",
             reviewerName: "John",
-            reviewMessage: "Cool guy to skate with, really friendly."
+            reviewMessage: "Here To Teach Cool guy to skate with, really friendly."
         }],
         skateDate: "4/27/2020",
         startTime: "11:00:00 AM",
