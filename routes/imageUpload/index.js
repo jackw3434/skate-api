@@ -1,5 +1,7 @@
-module.exports = function (router) {
-  require("./imageUpload.get")(router);
-  require("./imageUpload.post")(router);
-  require("./imageUpload.delete")(router);
+module.exports = function (router, upload, gfs) {
+  require("./profilePictureData.get")(router, gfs);
+  require("./profilePicture.post")(router, upload);
+  require("./profilePicture.delete")(router, gfs);
+  require("./profilePictureImage.get")(router, gfs);
+  require("./pictureData.getAll")(router, gfs);
 };
