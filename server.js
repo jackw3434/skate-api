@@ -1,14 +1,16 @@
 let express = require('express');
 let router = express.Router();
 let app = express();
-var http = require('http').Server(app);
 let bodyParser = require('body-parser');
 let { serverPort, connectionString, connectToMongoose, mongoose } = require('./database-connection/mongoose-connection');
+let GridFsStorage = require('multer-gridfs-storage');
+let Grid = require('gridfs-stream');
+let multer = require('multer');
+let crypto = require('crypto');
+let path = require('path');
+let gfs;
 
 connectToMongoose(connectionString);
-
-app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
-app.use(bodyParser.json({ limit: '50mb', extended: true }));
 
 //CORS middleware
 let allowCrossDomain = function (req, res, next) {
@@ -19,6 +21,35 @@ let allowCrossDomain = function (req, res, next) {
 }
 
 router.use(allowCrossDomain);
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+const storage = new GridFsStorage({
+    url: connectionString,
+    file: (req, file) => {
+        return new Promise((resolve, reject) => {
+            crypto.randomBytes(16, (err, buf) => {
+                if (err) {
+                    return reject(err);
+                }
+                const filename = buf.toString('hex') + path.extname(file.originalname);
+                const fileInfo = {
+                    filename: filename,
+                    bucketName: 'uploads'
+                };
+                resolve(fileInfo);
+            });
+        });
+    }
+})
+
+let upload = multer({ storage });
+
+mongoose.connection.once('open', () => {
+    gfs = Grid(mongoose.connection.db, mongoose.mongo);
+    gfs.collection('uploads')
+    require('./routes/imageUpload/index')(router, upload, gfs);
+})
 
 require('./routes/skatePin/index')(router);
 require('./routes/review/index')(router);
