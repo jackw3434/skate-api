@@ -7,7 +7,7 @@ module.exports = function (router, upload) {
         // if (!hasPermission(req.tokenData, "image.upload", req, res)) return;
 
         if(res.statusCode == 200){
-            return res.json({ file: req.file, message:"Successfully uploaded profile picture" });
+            return res.json({ file: req.file });
         } else {
             return res.json({ file: "failed" });
         }     
