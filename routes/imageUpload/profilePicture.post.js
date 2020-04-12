@@ -6,10 +6,17 @@ module.exports = function (router, upload) {
      
         // if (!hasPermission(req.tokenData, "image.upload", req, res)) return;
 
-        if(res.statusCode == 200){
-            return res.json({ file: req.file });
+        let responseMessage;
+        if(!req.file){
+            responseMessage = "no file"
         } else {
-            return res.json({ file: "failed" });
+            responseMessage = "file"
+        }
+
+        if(res.statusCode == 200){
+            return res.json({ file: req.file, message: responseMessage });
+        } else {
+            return res.json({ file: "failed", message: responseMessage });
         }     
     });
 }
