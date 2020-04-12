@@ -21,8 +21,8 @@ let allowCrossDomain = function (req, res, next) {
 }
 
 router.use(allowCrossDomain);
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ limit:"50mb", extended: true }));
+app.use(bodyParser.json({ limit:"50mb", extended: true }));
 
 const storage = new GridFsStorage({
     url: connectionString,
