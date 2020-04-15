@@ -2,11 +2,12 @@ const frisby = require('frisby');
 let port = require('../../../database-connection/mongoose-connection').serverPort;
 let baseURL = 'http://localhost:' + port + '/api/';
 let testHelper = require('../../../test/test-helper');
-
+let gfs = require('../../../server').gfs;
 describe('users test', function () {
 
     beforeAll(async (done) => {
         await testHelper.init();
+        await testHelper.deleteAllImages();
         await testHelper.prepareUsersCollection();
         await testHelper.loginsuperAdmin();
         return done();

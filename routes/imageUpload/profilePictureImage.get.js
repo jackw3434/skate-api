@@ -15,14 +15,17 @@ module.exports = function (router, gfs) {
             if (!file || file.length === 0) {
                 return res.status(404).json({ err: 'no file exist' })
             }
-
+         
             // check if image
             if (file.contentType === 'image/jpeg' || file.contentType === 'image/png') {
                 // read the output to browser
                 const readstream = gfs.createReadStream(file.filename);
-                readstream.pipe(res);
+                
+                readstream.pipe(res);          
+
+           
             } else {
-                res.status(404).json({ err: 'Not an image' })
+                return res.status(404).json({ err: 'Not an image' })
             }
         })
     });

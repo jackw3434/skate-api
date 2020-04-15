@@ -26,7 +26,7 @@ app.use(bodyParser.json({ limit:"50mb", extended: true }));
 
 const storage = new GridFsStorage({
     url: connectionString,
-    file: (req, file) => {
+    file: (req, file) => {        
         return new Promise((resolve, reject) => {
             crypto.randomBytes(16, (err, buf) => {
                 if (err) {
@@ -48,7 +48,7 @@ let upload = multer({ storage });
 mongoose.connection.once('open', () => {
     gfs = Grid(mongoose.connection.db, mongoose.mongo);
     gfs.collection('uploads')
-    require('./routes/imageUpload/index')(router, upload, gfs);
+    require('./routes/imageUpload/index')(router, upload, gfs);    
 })
 
 require('./routes/skatePin/index')(router);

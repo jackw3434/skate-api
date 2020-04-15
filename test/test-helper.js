@@ -5,6 +5,40 @@ let { serverPort, mongoose } = require('../database-connection/mongoose-connecti
 let baseURL = 'http://localhost:' + serverPort + '/api/';
 let auth = require('../utils/auth');
 let server = require('../server');
+let Grid = require('gridfs-stream');
+
+let deleteAllImages = async function () {
+
+    let gfs;
+    
+    mongoose.connection.once('open', () => {
+        gfs = Grid(mongoose.connection.db, mongoose.mongo);
+        gfs.collection('uploads');
+
+        gfs.files.find().toArray(async (err, files) => {
+            // check if files exist
+            if (!files || files.length === 0) {
+                console.log("no files", err);
+                return
+            }
+
+            for (let index = 0; index < files.length;) {
+
+                let file = files[index];               
+             
+                await gfs.remove({ _id: file._id, root:'uploads'  }, async (err, gridStore) => {
+                    if (err) {
+                        return err
+                    }
+                    await console.log("chunk deleted ", gridStore)
+                    return
+                })
+                index++
+            }
+            console.log("deleted")
+        })
+    })
+}
 
 let mongooseConnect = async function () {
     server;
@@ -27,8 +61,8 @@ let testHelper = {
                 "email": "jack.test@gmail.com",
                 "password": "test123"
             }, {
-                json: true
-            })
+                    json: true
+                })
                 .then(function (res) {
                     token = res._json.accessToken;
                     frisby.globalSetup({
@@ -43,6 +77,7 @@ let testHelper = {
         },
     prepareSkatePinsCollection: prepareSkatePins,
     prepareUsersCollection: prepareUsers,
+    deleteAllImages: deleteAllImages,
     init: mongooseConnect
 };
 

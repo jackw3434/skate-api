@@ -3,7 +3,7 @@ let UserReviewSchema = require('./userReview')
 let Schema = mongoose.Schema;
 
 let UserSchema = new Schema({
- // profilePicture: { type: String },
+  profilePicture: { type: String },
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   age: { type: String },

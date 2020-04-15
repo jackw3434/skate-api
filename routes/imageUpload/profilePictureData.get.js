@@ -8,13 +8,14 @@ module.exports = function (router, gfs) {
         // if (!hasPermission(req.tokenData, "image.get", req, res)) return;
 
         gfs.files.findOne({ filename: req.params.filename }, (err, file) => {
+      
             // check if file exist
             if (!file || file.length === 0) {
                 return res.status(404).json({ err: 'no file exist' })
             }
-
+        console.log(file)
             // file exist
             return res.json(file)
         })       
     });
-}
+};
