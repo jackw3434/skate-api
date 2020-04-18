@@ -21,7 +21,7 @@ module.exports = function (router, gfs) {
                 // read the output to browser
                 const readstream = gfs.createReadStream(file.filename);
                 
-                readstream.pipe(res);          
+                readstream.pipe(res);         
 
            
             } else {
