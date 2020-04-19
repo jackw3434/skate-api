@@ -18,10 +18,10 @@ let SkatePinSchema = new Schema({
   skateDate: { type: String },
   startTime: { type: String },
   endTime: { type: String },
-  expire_at: { type: Date, expires: Date ,default: null },
+  expireAt: { type: Date, expires: Date },
   pinColor: { type: String, required: true }
 });
 
-SkatePinSchema.index({ "expire_at": 1 },{expireAfterSeconds:0})
+SkatePinSchema.index({ expireAt: 1 }, { expireAfterSeconds: 0 })
 
 module.exports = mongoose.model("SkatePin", SkatePinSchema);
