@@ -169,7 +169,7 @@ let populateSkatePinsCollection = async function () {
             latitude: 50.385409,
             longitude: -4.154491
         },
-        description: "Plymouth Central Park Skate Park: Flat banks, quater pipes, bowl, snake run, half pipe",
+        description: ["Plymouth Central Park Skate Park: Flat banks, quater pipes, bowl, snake run, half pipe"],
         photo: "No Picture Yet",
 
         reviews: [
