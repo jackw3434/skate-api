@@ -12,7 +12,7 @@ let SkatePinSchema = new Schema({
     latitude: { type: Number, required: true },
     longitude: { type: Number, required: true }
   },
-  description: { type: String },
+  description: { type: [String] },
   photo: { type: String },
   reviews: [UserReviewSchema],
   skateDate: { type: String },
