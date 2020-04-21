@@ -19,7 +19,7 @@ module.exports = function (router, upload) {
             SkatePin.findById({ _id: req.params.id }, function (err, pin) {
 
                 if (err) {
-                    return res.status(400).send(err);
+                    return res.status(400).json({skateFinderrrorhererer: err});
                 }
 
                 pin.photo = req.file.filename;
@@ -27,7 +27,7 @@ module.exports = function (router, upload) {
                 pin.save(function (err, editedPin) {
 
                     if (err) {
-                        return res.status(400).send(err);
+                        return res.status(400).json({pinsaveerrrorhererer: err});
                     }
                     return res.json({ file: req.file, message: responseMessage, editedPin:editedPin });                 
                 })
