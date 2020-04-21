@@ -48,10 +48,10 @@ let upload = multer({ storage });
 mongoose.connection.once('open', () => {
     gfs = Grid(mongoose.connection.db, mongoose.mongo);
     gfs.collection('uploads')
-    require('./routes/imageUpload/index')(router, upload, gfs);    
+    require('./routes/imageUpload/index')(router, upload, gfs);  
+    require('./routes/skatePin/index')(router, upload);  
 })
 
-require('./routes/skatePin/index')(router);
 require('./routes/review/index')(router);
 require('./routes/user/index')(router);
 require('./routes/identity/index')(router);

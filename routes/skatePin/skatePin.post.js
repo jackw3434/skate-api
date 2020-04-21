@@ -2,23 +2,20 @@ let SkatePin = require('../../models/skatePin');
 let auth = require('../../utils/auth');
 let hasPermission = require('../../utils/hasPermission');
 
-module.exports = function (router) {
-    router.route('/skatePin').post(auth.required, function (req, res) {
+module.exports = function (router, upload) {
+    router.route('/skatePin').post(auth.required, upload.single("file"), function (req, res) {
 
         if (!hasPermission(req.tokenData, "skatePin.post", req, res)) return;
 
-        var skatePin = new SkatePin(req.body);        
+        let skatePin = new SkatePin(req.body);
 
-        // if (!skatePin.title ||
-        //     !skatePin.createdBy ||
-        //     !skatePin.coordinate.latitude ||
-        //     !skatePin.coordinate.longitude ||
-        //     !skatePin.description ||
-        //     !skatePin.startTime ||
-        //     !skatePin.endTime ||
-        //     !skatePin.pinColor) {
-        //     return res.status(400).send('validation_error, pin credentials are required.');
-        // }
+        let responseMessage;
+        if (!req.file) {
+            responseMessage = "no file"
+        } else {
+            responseMessage = "file"
+            skatePin = req.file.filename;
+        }
 
         skatePin.save(function (err, newSkatePin) {
 
@@ -30,7 +27,12 @@ module.exports = function (router) {
                 return res.status(400).send(err);
             }
 
-            return res.status(200).json("Skate Pin: " + newSkatePin.title + " has been created by " + newSkatePin.createdBy.userName);
+            return res.status(200).json(
+                "Skate Pin: " + newSkatePin.title +
+                " has been created by " + newSkatePin.createdBy.userName +
+                " photo: " + req.file +
+                " message: " + responseMessage
+            );
         })
     });
 }
